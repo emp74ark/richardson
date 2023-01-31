@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -12,19 +12,18 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -37,18 +36,12 @@ ol, ul {
 blockquote, q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
 /* End of reset */
 
 /* general body styling */
+:root {
+    font-size: 10px;
+}
 body {
 	font-family: "Poppins", Verdana, sans-serif;
 	background-color: #ffffff;
@@ -60,159 +53,244 @@ body {
 /* Nav styling */
 
 nav{
-    background-color: #FFFFFF;
-    border-bottom: #683F23 solid 1px;
+    background: #FFFFFF;
+    border-bottom: #683F23 solid .1rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 6rem;
+    padding: 0 8.4rem 0 13.5rem;
     font-family: "Cormorant Garamond",Georgia, Times, 'Times new roman', serif;
-
 }
 
 ul {
     display: inline-block;
-    padding-left: 7em;
-    padding-top: 0.75em;
-    padding-bottom: 0.75em;
-
 }
 
 ul li{
     display: inline-block;
     font-family: "Cormorant Garamond",Georgia, Times, 'Times new roman', serif;
     text-decoration: none;
-
 }
 
 ul li a{
     font-family: "Cormorant Garamond",Georgia, Times, 'Times new roman', serif;
     text-decoration: none;
     color: #40645C;
-    font-size: 1.25em;
+    font-size: 1.8rem;
     padding-right: 3em;
+}
+
+ul li a:hover{
+    text-decoration: underline;
+    text-underline-offset: .8rem;
+    text-decoration-thickness: .1rem;
+}
+
+ul li a:active{
+    color: #182F2A;
 }
 
 nav p{
     display: inline-block;
-    font-size: 1.25em;
-    padding-right: 7em;
-    padding-top: 0.75em;
-    padding-bottom: 0.75em;
+    font-size: 1.6rem;
 }
 
 /* End of nav styling */
 
 /* Header styling */
 
-figcaption{
-    font-family: 'Cormorant Garamond', sans-serif;
-    color: #FFFFFF;
-    font-size: 3em;
-}
-
 header{
-    background-image: url(./img/background-image.png);
-    repeat: none;
+    background: url(./img/background-image.png) no-repeat;
     background-size: cover;
-    align-items: center;
-    padding-top: 7em;
-    padding-bottom: 7em;
+    margin: 0 auto;
+    padding-top: 13rem;
+    padding-bottom: 11rem;
 }
 
-figure{
+header figure{
     display: block;
-    margin: 0 auto;
+    margin: auto;
     width: 80%;
 }
 
-figure img{
+header figure img{
     display: block;
-    margin: 0 auto;
+    margin: auto;
+    width: 25.2rem;
+    height: auto;
 }
 
-figure figcaption {
+header figure figcaption {
+    font-family: 'Cormorant Garamond', sans-serif;
+    color: #FFFFFF;
+    font-size: 4.2rem;
     text-align: center;
     display: block;
-    margin: 0 auto;
-    margin-top: 1em;
-    width: 70%;
+    margin: auto;
+    margin-top: 3rem;
+    width: 85%;
+    line-height: 5rem;
 }
 
 /* End of header styling */
 
-/* Styling meet our chefs section */
+/* Common styles for sections */
 
 h2 {
     font-family: "Cormorant Garamond", Georgia, Times, 'Times new roman', serif;
-    font-size: 2.5em;
+    font-size: 4rem;
     color: #4E2E18;
     text-align: center;
-    padding-top: 2em;
-    padding-bottom: 2em;
+}
+
+h3 {
+    color:#40645C;
+    font-size: 3rem;
+    font-family: "Cormorant Garamond", sans-serif;;
 }
 
 section{
-    background-color: #F0ECE9;
+    background: #F0ECE9;
+    font-size: 1.6rem;
 }
 
-section h3{
-    color:#40645C;
-    font-size: 1.75em;
-    font-family: "Cormorant Garamond";
-    width: 80%;
-    margin: 0 auto;
+section:nth-child(even) {
+    background: #DEDEDB;
 }
 
-section figure {
-    width: 80%;
+/* End of common styles */
+
+/* Styling meet our chefs section */
+
+.chefs {
+    padding-top: 13rem;
+    padding-bottom: 1rem;
+}
+
+.chefs figure {
+    margin: auto;
+    width: 70%;
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    gap: 3rem;
+    margin-top: 9rem;
+    margin-bottom: 17rem;
 }
 
-section figure figcaption {
-    display: block;
-    width: 50%;
+.chefs figure:nth-child(even) {
+    justify-content: flex-start;
 }
 
-section figure figcaption h3 {
-    font-size: 0.75em;
+.chefs figure:nth-child(odd) {
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.chefs figcaption {
+    width: 40rem;
+}
+
+.chefs h3 {
+    margin-bottom: 1.4rem;
+}
+
+.chefs img {
+    max-width: 20rem;
+    height: fit-content;
+}
+
+/* End of styling chefs section */
+
+/* Styling of products section */
+.products {
+    padding-top: 10rem;
+    padding-bottom: 1rem;
+}
+
+.products p {
+    width: 55%;
+    margin: auto;
+    padding-top: 3rem;
+    padding-bottom: 10rem;
+    text-align: center;
+}
+
+.products div {
+    margin: auto;
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10rem 6rem;
+}
+
+.products figure {
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+}
+
+.products img {
+    width: 20rem;
+}
+
+.products h3 {
+    margin-top: 2.2rem;
+    margin-bottom: .7rem;
+}
+
+.products figcaption p {
+    font-size: 1.4rem;
     text-align: left;
     width: 100%;
 }
-section figure figcaption p {
-    font-size: 0.3em;
-    font-family: "poppins";
-    color: #000;
-    text-align: left;
+
+/* End of products section */
+
+/* Come to us section */
+
+.come-to-us {
+    padding-top: 16rem;
+    padding-bottom: 19rem;
 }
 
-section figure img {
-    display: block;
-    width: 40%;
-    height: 40%;
+.come-to-us h2 {
+    margin-bottom: 12rem;
 }
 
-@media screen and (max-width:900px) {
-    section figure {
-        display: block;
-    }
-
+.come-to-us__wrapper {
+    margin: auto;
+    width: 70%;
+    display: flex;
 }
 
-@media screen and (min-width: 900px) and (max-width: 1200px){
-    section figure img {
-        width: 20%;
-        height: 20%;
-    }
-
+.come-to-us__text {
+    width: 37rem;
 }
 
-@media screen and (min-width:1200px) {
-    section figure img {
-        width:20%;
-        height: 20%;
-    }
+.come-to-us__text h3 {
+    margin-bottom: 1.2rem;
 }
+
+.come-to-us__text p {
+    margin-bottom: .6rem;
+}
+
+.come-to-us__text p:nth-child(3) {
+    margin-bottom: 4.8rem;
+}
+
+.come-to-us__text span {
+    font-weight: 700;
+    margin-right: 1ch;
+}
+
+.come-to-us__map {
+    width: 48rem;
+}
+
+/* End come to us section */
 
 /* Footer styling */
 footer{
@@ -223,4 +301,19 @@ footer{
 footer p{
     text-align: center;
     padding: 0.75em;
+}
+
+/* Media queries */
+@media screen and (max-width:900px) {
+
+
+}
+
+@media screen and (min-width: 900px) and (max-width: 1200px){
+
+
+}
+
+@media screen and (min-width:1200px) {
+
 }
