@@ -137,6 +137,17 @@ header figure figcaption {
 
 /* Common styles for sections */
 
+h1 {
+    font-family: Cormorant Garamond, serif;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 4.8rem;
+    letter-spacing: 0;
+    text-align: left;
+    color: #4E2E18;
+    margin-bottom: 1.6rem;
+}
+
 h2 {
     font-family: "Cormorant Garamond", Georgia, Times, 'Times new roman', serif;
     font-size: 4rem;
@@ -151,12 +162,7 @@ h3 {
 }
 
 section{
-    background: #F0ECE9;
     font-size: 1.6rem;
-}
-
-section:nth-child(even) {
-    background: #DEDEDB;
 }
 
 /* End of common styles */
@@ -166,6 +172,7 @@ section:nth-child(even) {
 .chefs {
     padding-top: 13rem;
     padding-bottom: 1rem;
+    background: #F0ECE9;
 }
 
 .chefs figure {
@@ -205,6 +212,7 @@ section:nth-child(even) {
 .products {
     padding-top: 10rem;
     padding-bottom: 1rem;
+    background: #DEDEDB;
 }
 
 .products p {
@@ -253,6 +261,7 @@ section:nth-child(even) {
 .come-to-us {
     padding-top: 16rem;
     padding-bottom: 19rem;
+    background: #f0ece9;
 }
 
 .come-to-us h2 {
@@ -291,6 +300,26 @@ section:nth-child(even) {
 }
 
 /* End come to us section */
+
+/* History section */
+
+.history {
+    background: #F0ECE9;
+    padding-top: 10rem;
+}
+
+.history__wrapper {
+    display: flex;
+    gap: 6rem;
+    width: 80%;
+    margin: auto;
+}
+
+.history img {
+    max-width: 38rem;
+}
+
+/* end of history section */
 
 /* Footer styling */
 footer{
