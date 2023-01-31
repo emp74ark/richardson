@@ -1,0 +1,226 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* End of reset */
+
+/* general body styling */
+body {
+	font-family: "Poppins", Verdana, sans-serif;
+	background-color: #ffffff;
+	color: #000000;
+	line-height: 1.5;
+}
+
+
+/* Nav styling */
+
+nav{
+    background-color: #FFFFFF;
+    border-bottom: #683F23 solid 1px;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Cormorant Garamond",Georgia, Times, 'Times new roman', serif;
+
+}
+
+ul {
+    display: inline-block;
+    padding-left: 7em;
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
+
+}
+
+ul li{
+    display: inline-block;
+    font-family: "Cormorant Garamond",Georgia, Times, 'Times new roman', serif;
+    text-decoration: none;
+
+}
+
+ul li a{
+    font-family: "Cormorant Garamond",Georgia, Times, 'Times new roman', serif;
+    text-decoration: none;
+    color: #40645C;
+    font-size: 1.25em;
+    padding-right: 3em;
+}
+
+nav p{
+    display: inline-block;
+    font-size: 1.25em;
+    padding-right: 7em;
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
+}
+
+/* End of nav styling */
+
+/* Header styling */
+
+figcaption{
+    font-family: 'Cormorant Garamond', sans-serif;
+    color: #FFFFFF;
+    font-size: 3em;
+}
+
+header{
+    background-image: url(./img/background-image.png);
+    repeat: none;
+    background-size: cover;
+    align-items: center;
+    padding-top: 7em;
+    padding-bottom: 7em;
+}
+
+figure{
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+}
+
+figure img{
+    display: block;
+    margin: 0 auto;
+}
+
+figure figcaption {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    margin-top: 1em;
+    width: 70%;
+}
+
+/* End of header styling */
+
+/* Styling meet our chefs section */
+
+h2 {
+    font-family: "Cormorant Garamond", Georgia, Times, 'Times new roman', serif;
+    font-size: 2.5em;
+    color: #4E2E18;
+    text-align: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+section{
+    background-color: #F0ECE9;
+}
+
+section h3{
+    color:#40645C;
+    font-size: 1.75em;
+    font-family: "Cormorant Garamond";
+    width: 80%;
+    margin: 0 auto;
+}
+
+section figure {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+section figure figcaption {
+    display: block;
+    width: 50%;
+}
+
+section figure figcaption h3 {
+    font-size: 0.75em;
+    text-align: left;
+    width: 100%;
+}
+section figure figcaption p {
+    font-size: 0.3em;
+    font-family: "poppins";
+    color: #000;
+    text-align: left;
+}
+
+section figure img {
+    display: block;
+    width: 40%;
+    height: 40%;
+}
+
+@media screen and (max-width:900px) {
+    section figure {
+        display: block;
+    }
+
+}
+
+@media screen and (min-width: 900px) and (max-width: 1200px){
+    section figure img {
+        width: 20%;
+        height: 20%;
+    }
+
+}
+
+@media screen and (min-width:1200px) {
+    section figure img {
+        width:20%;
+        height: 20%;
+    }
+}
+
+/* Footer styling */
+footer{
+    background-color: #4E2E18;
+    color: #FFFFFF;
+}
+
+footer p{
+    text-align: center;
+    padding: 0.75em;
+}
