@@ -49,10 +49,9 @@ body {
 	line-height: 1.5;
 }
 
-
 /* Nav styling */
 
-nav{
+nav {
     background: #FFFFFF;
     border-bottom: #683F23 solid .1rem;
     display: flex;
@@ -67,7 +66,7 @@ ul {
     display: inline-block;
 }
 
-ul li{
+ul li {
     display: inline-block;
     font-family: "Cormorant Garamond",Georgia, Times, 'Times new roman', serif;
     text-decoration: none;
@@ -177,7 +176,8 @@ section{
 
 .chefs figure {
     margin: auto;
-    width: 70%;
+    width: 80%;
+    max-width: 90rem;
     display: flex;
     gap: 3rem;
     margin-top: 9rem;
@@ -226,6 +226,7 @@ section{
 .products div {
     margin: auto;
     width: 60%;
+    max-width: 90rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -271,6 +272,7 @@ section{
 .come-to-us__wrapper {
     margin: auto;
     width: 70%;
+    max-width: 90rem;
     display: flex;
 }
 
@@ -295,8 +297,10 @@ section{
     margin-right: 1ch;
 }
 
-.come-to-us__map {
+.come-to-us__map iframe {
     width: 48rem;
+    height: 30rem;
+    border: 0;
 }
 
 /* End come to us section */
@@ -325,24 +329,232 @@ section{
 footer{
     background-color: #4E2E18;
     color: #FFFFFF;
+    font-size: 1.2rem;
 }
 
 footer p{
     text-align: center;
-    padding: 0.75em;
+    padding: 1.4rem;
 }
 
 /* Media queries */
-@media screen and (max-width:900px) {
 
+@media (max-width: 700px) {
+    nav {
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        height: 12rem;
+        padding: 0;
+    }
 
+    nav ul {
+        text-align: center;
+    }
+
+    ul li a{
+        padding: 0 1rem;
+    }
+
+    header{
+        padding-top: 3rem;
+        padding-bottom: 4.7rem;
+    }
+
+    header figure img{
+        width: 15.2rem;
+        height: auto;
+    }
+
+    header figure figcaption {
+        font-size: 3rem;
+        margin-top: 1.2rem;
+        width: 85%;
+        line-height: 3.6rem;
+    }
+
+    .chefs {
+        padding: 4rem 3rem 2.2rem 3rem;
+    }
+
+    .chefs figure {
+        margin: auto;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 4rem;
+        margin-bottom: 7.6rem;
+    }
+
+    .chefs figcaption {
+        width: 100%;
+    }
+
+    .chefs figure:nth-child(odd) {
+        flex-direction: column-reverse;
+        text-align: left;
+    }
+
+    .products {
+        padding-top: 8.6rem;
+        padding-bottom: 10rem;
+    }
+
+    .products p {
+        width: 80%;
+        padding-bottom: 6.7rem;
+    }
+
+    .products div {
+        flex-direction: column;
+        gap: 6rem;
+    }
+
+    .products figure {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .products figcaption p {
+        padding: 0;
+    }
+
+    .come-to-us {
+        padding-top: 6.6rem;
+        padding-bottom: 4.2rem;
+    }
+
+    .come-to-us h2 {
+        margin-bottom: 4.2rem;
+    }
+
+    .come-to-us__wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .come-to-us__text {
+        width: auto;
+    }
+
+    .come-to-us__map iframe {
+        width: 100%;
+        height: 20rem;
+        margin-bottom: 5rem;
+    }
+
+    .history {
+        padding-top: 0;
+    }
+
+    .history__wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: auto;
+    }
+
+    .history__text {
+        padding: 3.8rem;
+    }
+
+    .history img {
+        width: 100%;
+    }
 }
 
-@media screen and (min-width: 900px) and (max-width: 1200px){
+@media (min-width: 701px) and (max-width: 1279px){
+    nav {
+        align-items: flex-start;
+        justify-content: space-evenly;
+        flex-direction: column;
+        height: 12rem;
+        padding: 0 5rem;
+    }
 
+    header{
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
 
-}
+    header figure figcaption {
+        font-size: 3rem;
+        margin-top: 1.2rem;
+        width: 85%;
+        line-height: 3.6rem;
+    }
 
-@media screen and (min-width:1200px) {
+    .chefs {
+        padding-top: 12rem;
+        padding-bottom: 4rem;
+    }
 
+    .chefs figure {
+        margin: auto;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        margin-top: 9rem;
+        margin-bottom: 10rem;
+    }
+
+    .chefs figure:nth-child(odd) {
+        flex-direction: column-reverse;
+        text-align: left;
+    }
+
+    .products {
+        padding-top: 9rem;
+        padding-bottom: 12rem;
+    }
+
+    .products p {
+        width: 75%;
+    }
+
+    .products div {
+        flex-direction: column;
+        gap: 6rem;
+    }
+
+    .products figure {
+        display: flex;
+        flex-direction: column;
+        width: 32rem;
+    }
+
+    .products figcaption p {
+        padding: 0;
+    }
+
+    .come-to-us {
+        padding-top: 9rem;
+        padding-bottom: 9rem;
+    }
+
+    .come-to-us__wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .come-to-us__text {
+        width: auto;
+    }
+
+    .come-to-us__map iframe {
+        width: 100%;
+        height: 50rem;
+        margin-bottom: 5rem;
+    }
+
+    .history {
+        padding-top: 6rem;
+    }
+
+    .history__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
 }
