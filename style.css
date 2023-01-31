@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -12,215 +12,555 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
+    display: block;
 }
+
 body {
-	line-height: 1;
+    line-height: 1;
 }
+
 ol, ul {
-	list-style: none;
+    list-style: none;
 }
+
 blockquote, q {
-	quotes: none;
+    quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+
 /* End of reset */
 
 /* general body styling */
-body {
-	font-family: "Poppins", Verdana, sans-serif;
-	background-color: #ffffff;
-	color: #000000;
-	line-height: 1.5;
+:root {
+    font-size: 10px;
 }
 
+body {
+    font-family: "Poppins", Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.5;
+}
 
 /* Nav styling */
 
-nav{
-    background-color: #FFFFFF;
-    border-bottom: #683F23 solid 1px;
+nav {
+    background: #FFFFFF;
+    border-bottom: #683F23 solid .1rem;
     display: flex;
     justify-content: space-between;
-    font-family: "Cormorant Garamond",Georgia, Times, 'Times new roman', serif;
-
+    align-items: center;
+    height: 6rem;
+    padding: 0 8.4rem 0 13.5rem;
+    font-family: "Cormorant Garamond", Georgia, Times, 'Times new roman', serif;
 }
 
 ul {
     display: inline-block;
-    padding-left: 7em;
-    padding-top: 0.75em;
-    padding-bottom: 0.75em;
-
 }
 
-ul li{
+ul li {
     display: inline-block;
-    font-family: "Cormorant Garamond",Georgia, Times, 'Times new roman', serif;
+    font-family: "Cormorant Garamond", Georgia, Times, 'Times new roman', serif;
     text-decoration: none;
-
 }
 
-ul li a{
-    font-family: "Cormorant Garamond",Georgia, Times, 'Times new roman', serif;
+ul li a {
+    font-family: "Cormorant Garamond", Georgia, Times, 'Times new roman', serif;
     text-decoration: none;
     color: #40645C;
-    font-size: 1.25em;
+    font-size: 1.8rem;
     padding-right: 3em;
 }
 
-nav p{
+ul li a:hover {
+    text-decoration: underline;
+    text-underline-offset: .8rem;
+    text-decoration-thickness: .1rem;
+}
+
+ul li a:active {
+    color: #182F2A;
+}
+
+nav p {
     display: inline-block;
-    font-size: 1.25em;
-    padding-right: 7em;
-    padding-top: 0.75em;
-    padding-bottom: 0.75em;
+    font-size: 1.6rem;
 }
 
 /* End of nav styling */
 
 /* Header styling */
 
-figcaption{
-    font-family: 'Cormorant Garamond', sans-serif;
-    color: #FFFFFF;
-    font-size: 3em;
-}
-
-header{
-    background-image: url(./img/background-image.png);
-    repeat: none;
+header {
+    background: url(./img/background-image.png) no-repeat;
     background-size: cover;
-    align-items: center;
-    padding-top: 7em;
-    padding-bottom: 7em;
+    margin: 0 auto;
+    padding-top: 13rem;
+    padding-bottom: 11rem;
 }
 
-figure{
+header figure {
     display: block;
-    margin: 0 auto;
+    margin: auto;
     width: 80%;
 }
 
-figure img{
+header figure img {
     display: block;
-    margin: 0 auto;
+    margin: auto;
+    width: 25.2rem;
+    height: auto;
 }
 
-figure figcaption {
+header figure figcaption {
+    font-family: 'Cormorant Garamond', sans-serif;
+    color: #FFFFFF;
+    font-size: 4.2rem;
     text-align: center;
     display: block;
-    margin: 0 auto;
-    margin-top: 1em;
-    width: 70%;
+    margin: auto;
+    margin-top: 3rem;
+    width: 85%;
+    line-height: 5rem;
 }
 
 /* End of header styling */
 
-/* Styling meet our chefs section */
+/* Common styles for sections */
+
+h1 {
+    font-family: Cormorant Garamond, serif;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 4.8rem;
+    letter-spacing: 0;
+    text-align: left;
+    color: #4E2E18;
+    margin-bottom: 1.6rem;
+}
 
 h2 {
     font-family: "Cormorant Garamond", Georgia, Times, 'Times new roman', serif;
-    font-size: 2.5em;
+    font-size: 4rem;
     color: #4E2E18;
     text-align: center;
-    padding-top: 2em;
-    padding-bottom: 2em;
 }
 
-section{
-    background-color: #F0ECE9;
+h3 {
+    color: #40645C;
+    font-size: 3rem;
+    font-family: "Cormorant Garamond", sans-serif;;
 }
 
-section h3{
-    color:#40645C;
-    font-size: 1.75em;
-    font-family: "Cormorant Garamond";
+section {
+    font-size: 1.6rem;
+}
+
+/* End of common styles */
+
+/* Styling meet our chefs section */
+
+.chefs {
+    padding-top: 13rem;
+    padding-bottom: 1rem;
+    background: #F0ECE9;
+}
+
+.chefs figure {
+    margin: auto;
     width: 80%;
-    margin: 0 auto;
-}
-
-section figure {
-    width: 80%;
+    max-width: 90rem;
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    gap: 3rem;
+    margin-top: 9rem;
+    margin-bottom: 17rem;
 }
 
-section figure figcaption {
-    display: block;
-    width: 50%;
+.chefs figure:nth-child(even) {
+    justify-content: flex-start;
 }
 
-section figure figcaption h3 {
-    font-size: 0.75em;
+.chefs figure:nth-child(odd) {
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.chefs figcaption {
+    width: 40rem;
+}
+
+.chefs h3 {
+    margin-bottom: 1.4rem;
+}
+
+.chefs img {
+    max-width: 20rem;
+    height: fit-content;
+}
+
+/* End of styling chefs section */
+
+/* Styling of products section */
+.products {
+    padding-top: 10rem;
+    padding-bottom: 1rem;
+    background: #DEDEDB;
+}
+
+.products p {
+    width: 55%;
+    margin: auto;
+    padding-top: 3rem;
+    padding-bottom: 10rem;
+    text-align: center;
+}
+
+.products div {
+    margin: auto;
+    width: 60%;
+    max-width: 90rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10rem 6rem;
+}
+
+.products figure {
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+}
+
+.products img {
+    width: 20rem;
+}
+
+.products h3 {
+    margin-top: 2.2rem;
+    margin-bottom: .7rem;
+}
+
+.products figcaption p {
+    font-size: 1.4rem;
     text-align: left;
     width: 100%;
 }
-section figure figcaption p {
-    font-size: 0.3em;
-    font-family: "poppins";
-    color: #000;
-    text-align: left;
+
+/* End of products section */
+
+/* Come to us section */
+
+.come-to-us {
+    padding-top: 16rem;
+    padding-bottom: 19rem;
+    background: #f0ece9;
 }
 
-section figure img {
-    display: block;
-    width: 40%;
-    height: 40%;
+.come-to-us h2 {
+    margin-bottom: 12rem;
 }
 
-@media screen and (max-width:900px) {
-    section figure {
-        display: block;
-    }
-
+.come-to-us__wrapper {
+    margin: auto;
+    width: 70%;
+    max-width: 90rem;
+    display: flex;
 }
 
-@media screen and (min-width: 900px) and (max-width: 1200px){
-    section figure img {
-        width: 20%;
-        height: 20%;
-    }
-
+.come-to-us__text {
+    width: 37rem;
 }
 
-@media screen and (min-width:1200px) {
-    section figure img {
-        width:20%;
-        height: 20%;
-    }
+.come-to-us__text h3 {
+    margin-bottom: 1.2rem;
 }
+
+.come-to-us__text p {
+    margin-bottom: .6rem;
+}
+
+.come-to-us__text p:nth-child(3) {
+    margin-bottom: 4.8rem;
+}
+
+.come-to-us__text span {
+    font-weight: 700;
+    margin-right: 1ch;
+}
+
+.come-to-us__map iframe {
+    width: 48rem;
+    height: 30rem;
+    border: 0;
+}
+
+/* End come to us section */
+
+/* History section */
+
+.history {
+    background: #F0ECE9;
+    padding-top: 10rem;
+}
+
+.history__wrapper {
+    display: flex;
+    gap: 6rem;
+    width: 80%;
+    margin: auto;
+}
+
+.history img {
+    max-width: 38rem;
+}
+
+/* end of history section */
 
 /* Footer styling */
-footer{
+footer {
     background-color: #4E2E18;
     color: #FFFFFF;
+    font-size: 1.2rem;
 }
 
-footer p{
+footer p {
     text-align: center;
-    padding: 0.75em;
+    padding: 1.4rem;
+}
+
+/* Media queries */
+
+@media (max-width: 700px) {
+    nav {
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        height: 12rem;
+        padding: 0;
+    }
+
+    nav ul {
+        text-align: center;
+    }
+
+    ul li a {
+        padding: 0 1rem;
+    }
+
+    header {
+        padding-top: 3rem;
+        padding-bottom: 4.7rem;
+    }
+
+    header figure img {
+        width: 15.2rem;
+        height: auto;
+    }
+
+    header figure figcaption {
+        font-size: 3rem;
+        margin-top: 1.2rem;
+        width: 85%;
+        line-height: 3.6rem;
+    }
+
+    .chefs {
+        padding: 4rem 3rem 2.2rem 3rem;
+    }
+
+    .chefs figure {
+        margin: auto;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 4rem;
+        margin-bottom: 7.6rem;
+    }
+
+    .chefs figcaption {
+        width: 100%;
+    }
+
+    .chefs figure:nth-child(odd) {
+        flex-direction: column-reverse;
+        text-align: left;
+    }
+
+    .products {
+        padding-top: 8.6rem;
+        padding-bottom: 10rem;
+    }
+
+    .products p {
+        width: 80%;
+        padding-bottom: 6.7rem;
+    }
+
+    .products div {
+        flex-direction: column;
+        gap: 6rem;
+    }
+
+    .products figure {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .products figcaption p {
+        padding: 0;
+    }
+
+    .come-to-us {
+        padding-top: 6.6rem;
+        padding-bottom: 4.2rem;
+    }
+
+    .come-to-us h2 {
+        margin-bottom: 4.2rem;
+    }
+
+    .come-to-us__wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .come-to-us__text {
+        width: auto;
+    }
+
+    .come-to-us__map iframe {
+        width: 100%;
+        height: 20rem;
+        margin-bottom: 5rem;
+    }
+
+    .history {
+        padding-top: 0;
+    }
+
+    .history__wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: auto;
+    }
+
+    .history__text {
+        padding: 3.8rem;
+    }
+
+    .history img {
+        width: 100%;
+    }
+}
+
+@media (min-width: 701px) and (max-width: 1279px) {
+    nav {
+        align-items: flex-start;
+        justify-content: space-evenly;
+        flex-direction: column;
+        height: 12rem;
+        padding: 0 5rem;
+    }
+
+    header {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    header figure figcaption {
+        font-size: 3rem;
+        margin-top: 1.2rem;
+        width: 85%;
+        line-height: 3.6rem;
+    }
+
+    .chefs {
+        padding-top: 12rem;
+        padding-bottom: 4rem;
+    }
+
+    .chefs figure {
+        margin: auto;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        margin-top: 9rem;
+        margin-bottom: 10rem;
+    }
+
+    .chefs figure:nth-child(odd) {
+        flex-direction: column-reverse;
+        text-align: left;
+    }
+
+    .products {
+        padding-top: 9rem;
+        padding-bottom: 12rem;
+    }
+
+    .products p {
+        width: 75%;
+    }
+
+    .products div {
+        flex-direction: column;
+        gap: 6rem;
+    }
+
+    .products figure {
+        display: flex;
+        flex-direction: column;
+        width: 32rem;
+    }
+
+    .products figcaption p {
+        padding: 0;
+    }
+
+    .come-to-us {
+        padding-top: 9rem;
+        padding-bottom: 9rem;
+    }
+
+    .come-to-us__wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .come-to-us__text {
+        width: auto;
+    }
+
+    .come-to-us__map iframe {
+        width: 100%;
+        height: 50rem;
+        margin-bottom: 5rem;
+    }
+
+    .history {
+        padding-top: 6rem;
+    }
+
+    .history__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
 }
